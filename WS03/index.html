@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 3 - Advanced CSS</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 10px;
+            border: 1px solid #eee;
+        }
+
+        /* Task 1: CSS Transitions */
+        .transition-button {
+            background-color: lightblue;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+        .transition-button:hover {
+            background-color: lightcoral;
+        }
+
+        /* Task 2: CSS Animations */
+        .animation-container {
+            position: relative;
+            width: 200px;
+            height: 60px;
+        }
+        .animation-box {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            position: relative;
+            animation: move 2s infinite alternate;
+        }
+        @keyframes move {
+            from { left: 0; }
+            to { left: 100px; }
+        }
+
+        /* Task 3: CSS Pseudo-classes */
+        .pseudo-list {
+            list-style-type: none;
+            padding: 0;
+            width: 200px;
+            border: 1px solid #ccc;
+        }
+        .pseudo-list li {
+            padding: 10px;
+        }
+        .pseudo-list li:nth-child(odd) {
+            background-color: lightgray;
+        }
+        .pseudo-list li:nth-child(even) {
+            background-color: white;
+        }
+
+        /* Task 4: CSS Filters */
+        .filter-image {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+        .filter-image:hover {
+            filter: grayscale(0%);
+        }
+
+        /* Task 5: CSS Pseudo-elements */
+        .quote {
+            position: relative;
+            padding-left: 40px;
+            font-style: italic;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .quote::before {
+            content: '"';
+            font-size: 60px;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            color: lightgray;
+            font-family: serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Workshop 3: Advanced CSS Techniques</h1>
+
+    <section>
+        <h2>Task 1: CSS Transitions</h2>
+        <button class="transition-button">Hover me</button>
+    </section>
+
+    <section>
+        <h2>Task 2: CSS Animations</h2>
+        <div class="animation-container">
+            <div class="animation-box"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Task 3: CSS Pseudo-classes</h2>
+        <ul class="pseudo-list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Task 4: CSS Filters</h2>
+        <img src="https://picsum.photos/300/200" alt="Sample Image" class="filter-image">
+    </section>
+
+    <section>
+        <h2>Task 5: CSS Pseudo-elements</h2>
+        <blockquote class="quote">
+            This is a sample quote.
+        </blockquote>
+    </section>
+
+</body>
+</html>
