@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 5 - Responsive Design</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Task 1: Responsive Layout */
+        .responsive-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            background-color: #e0e0e0;
+        }
+        .column {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        /* Task 2: Responsive Image */
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+        }
+
+        /* Task 3: Media Queries */
+        .media-query-box {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+
+        /* Task 4: Responsive Navigation Bar */
+        .responsive-nav {
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .responsive-nav .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 15px;
+        }
+        .responsive-nav .nav-list a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Hide the button on desktop screens */
+        .responsive-nav .menu-toggle {
+            display: none; 
+            background: none;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* --- MEDIA QUERIES FOR SMALL SCREENS (Mobile) --- */
+        @media (max-width: 600px) {
+            /* Task 1 Mobile */
+            .column {
+                flex: 100%;
+            }
+
+            /* Task 3 Mobile */
+            .media-query-box {
+                background-color: lightcoral;
+            }
+
+            /* Task 4 Mobile */
+            .responsive-nav .nav-list {
+                display: none;
+            }
+            .responsive-nav .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Task 3 Desktop */
+        @media (min-width: 601px) {
+            .media-query-box {
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 4: Responsive Navigation -->
+    <nav class="responsive-nav">
+        <button class="menu-toggle">≡ Menu</button>
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h2>Task 1: Responsive Layout</h2>
+    <div class="responsive-container">
+        <div class="column">Column 1</div>
+        <div class="column">Column 2</div>
+    </div>
+
+    <h2>Task 2: Responsive Image</h2>
+    <!-- Using a placeholder image so it works immediately -->
+    <img src="https://via.placeholder.com/800x400?text=Responsive+Image" alt="Responsive Image" class="responsive-image">
+
+    <h2>Task 3: Media Queries</h2>
+    <div class="media-query-box">Resize the window to see the effect</div>
+
+</body>
+</html>
